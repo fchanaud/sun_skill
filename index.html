@@ -5,131 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ace Rec - Curated Tennis Camps</title>
     <meta name="description" content="Curated Tennis Camps with Premium Coaching in sunny destinations. Hassle-free experience for ambitious players.">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'citrus-yellow': '#FFD633',
+                        'lime-green': '#66B032',
+                        'orange': '#FF7F2A',
+                        'grapefruit-red': '#FF4C4C',
+                        'leaf-green': '#2F7D32',
+                        'light-neutral': '#F7F7F7',
+                        'dark-slate': '#1E1E1E',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'tennis-court': "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+                        url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+        .animate-scroll-bounce {
+            animation: scrollBounce 2s infinite;
+        }
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% { opacity: 0.7; }
+            40% { opacity: 0.3; }
+            60% { opacity: 1; }
+        }
+    </style>
 </head>
-<body>
+<body class="font-inter text-dark-slate scroll-smooth">
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-logo">
-                <h1>Ace Rec</h1>
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="hero-bg absolute inset-0 -z-10"></div>
+        <div class="text-center text-white z-10 relative max-w-4xl mx-auto px-6">
+            <!-- Logo -->
+            <div class="absolute -top-44 left-0 right-0">
+                <h1 class="text-4xl font-bold opacity-100 text-white drop-shadow-lg">Ace Rec</h1>
             </div>
+            
+            <!-- Main Content -->
             <div class="hero-text">
-                <h2>Curated Tennis<br>Camps.</h2>
-                <h2 class="highlight">Premium Coaching.</h2>
-                <h2>Hassle-Free.</h2>
-                <p>Our team have curated the best camps in <strong>sunny destination</strong><br>
-                with high quality coaching so you focus on what you love the<br>
-                most: play tennis!</p>
-                <button class="cta-button">Discover More</button>
+                <h2 class="text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Curated Tennis</h2>
+                <h2 class="text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Camps.</h2>
+                <h2 class="text-6xl md:text-7xl font-black leading-none mb-3 text-citrus-yellow drop-shadow-lg">Premium Coaching.</h2>
+                <h2 class="text-6xl md:text-7xl font-black leading-none mb-8 drop-shadow-lg">Hassle-Free.</h2>
+                
+                <p class="text-lg md:text-xl leading-relaxed mb-10 opacity-95 drop-shadow-md max-w-2xl mx-auto">
+                    Our team have curated the best camps in <strong>sunny destination</strong><br class="hidden md:block">
+                    with high quality coaching so you focus on what you love the<br class="hidden md:block">
+                    most: play tennis!
+                </p>
+                
+                <button class="bg-grapefruit-red text-white border-none py-5 px-10 text-lg font-semibold rounded-full cursor-pointer transition-all duration-300 inline-block shadow-lg hover:bg-red-600 hover:-translate-y-1 hover:shadow-xl mb-12">
+                    Discover More
+                </button>
             </div>
-            <div class="country-flags">
-                <img src="https://flagcdn.com/w40/es.png" alt="Spain" width="24" height="18">
-                <img src="https://flagcdn.com/w40/fr.png" alt="France" width="24" height="18">
-                <img src="https://flagcdn.com/w40/pt.png" alt="Portugal" width="24" height="18">
+            
+            <!-- Country Flags -->
+            <div class="flex justify-center gap-5 mb-6">
+                <img src="https://flagcdn.com/w40/es.png" alt="Spain" width="24" height="18" class="rounded transition-transform duration-200 hover:scale-110">
+                <img src="https://flagcdn.com/w40/fr.png" alt="France" width="24" height="18" class="rounded transition-transform duration-200 hover:scale-110">
+                <img src="https://flagcdn.com/w40/pt.png" alt="Portugal" width="24" height="18" class="rounded transition-transform duration-200 hover:scale-110">
             </div>
-            <div class="scroll-indicator">
-                <div class="scroll-line"></div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                <div class="w-0.5 h-16 bg-white opacity-70 animate-scroll-bounce"></div>
             </div>
         </div>
     </section>
 
     <!-- What You'll Gain Section -->
-    <section class="benefits" id="benefits">
-        <div class="container">
-            <div class="section-header">
-                <h2>What You'll Gain</h2>
-                <p>Real outcomes that matter to ambitious players who value their time and want<br>guaranteed results</p>
+    <section class="bg-light-neutral py-24" id="benefits">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-dark-slate mb-6">What You'll Gain</h2>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    Real outcomes that matter to ambitious players who value their time and want<br class="hidden md:block">
+                    guaranteed results
+                </p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon clock">
+            
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Save Time & Avoid Risk -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="10" stroke="#FF4C4C" stroke-width="2"/>
                             <polyline points="12,6 12,12 16,14" stroke="#FF4C4C" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Save Time & Avoid Risk</h3>
-                    <p>No more hours searching—we've done the work. No risk of disappointing camps</p>
+                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Save Time & Avoid Risk</h3>
+                    <p class="text-gray-600 leading-relaxed">No more hours searching—we've done the work. No risk of disappointing camps</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon progress">
+                
+                <!-- Serious Tennis Progress -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 3v18h18" stroke="#FF4C4C" stroke-width="2"/>
                             <path d="M7 12l4-4 4 4 4-4" stroke="#FF4C4C" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Serious Tennis Progress</h3>
-                    <p>Learn, improve, and take real skills back home in just a few days</p>
+                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Serious Tennis Progress</h3>
+                    <p class="text-gray-600 leading-relaxed">Learn, improve, and take real skills back home in just a few days</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon star">
+                
+                <!-- Curated Experience -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="#FF4C4C" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Curated Experience</h3>
-                    <p>Train hard in premium settings with sun, great locations, and thoughtful extras</p>
+                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Curated Experience</h3>
+                    <p class="text-gray-600 leading-relaxed">Train hard in premium settings with sun, great locations, and thoughtful extras</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon shield">
+                
+                <!-- Complete Confidence -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF4C4C" stroke-width="2"/>
                             <path d="M9 12l2 2 4-4" stroke="#FF4C4C" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Complete Confidence</h3>
-                    <p>Book knowing a tennis passionate expert has tested and approved every detail</p>
+                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Complete Confidence</h3>
+                    <p class="text-gray-600 leading-relaxed">Book knowing a tennis passionate expert has tested and approved every detail</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
+    <section class="bg-white py-24" id="how-it-works">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black text-dark-slate mb-6">How It Works</h2>
             </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Share Your Tennis Goals</h3>
-                        <p>Tell me your current level, what you want to improve, and your training preferences</p>
+            
+            <!-- Steps Container -->
+            <div class="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16 mb-16">
+                <!-- Step 1 -->
+                <div class="flex-1 max-w-sm text-center">
+                    <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Share Your Tennis Goals</h3>
+                        <p class="text-gray-600 leading-relaxed">Tell me your current level, what you want to improve, and your training preferences</p>
                     </div>
                 </div>
-                <div class="step-arrow">
+                
+                <!-- Arrow 1 -->
+                <div class="hidden lg:flex items-center justify-center mt-10 flex-shrink-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12h14m-7-7 7 7-7 7" stroke="#FF7F2A" stroke-width="2"/>
                     </svg>
                 </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Get Handpicked Options</h3>
-                        <p>Receive 2-3 team-tested camps that perfectly match your profile</p>
+                
+                <!-- Step 2 -->
+                <div class="flex-1 max-w-sm text-center">
+                    <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Get Handpicked Options</h3>
+                        <p class="text-gray-600 leading-relaxed">Receive 2-3 team-tested camps that perfectly match your profile</p>
                     </div>
                 </div>
-                <div class="step-arrow">
+                
+                <!-- Arrow 2 -->
+                <div class="hidden lg:flex items-center justify-center mt-10 flex-shrink-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 12h14m-7-7 7 7-7 7" stroke="#FF7F2A" stroke-width="2"/>
                     </svg>
                 </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Pack & Go</h3>
-                        <p>We arrange everything—you just show up, train hard, and return with measurable progress</p>
+                
+                <!-- Step 3 -->
+                <div class="flex-1 max-w-sm text-center">
+                    <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">03</div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Pack & Go</h3>
+                        <p class="text-gray-600 leading-relaxed">We arrange everything—you just show up, train hard, and return with measurable progress</p>
                     </div>
                 </div>
             </div>
-            <div class="cta-section">
-                <button class="cta-button secondary">Reach out for more infos!</button>
+            
+            <!-- CTA Section -->
+            <div class="text-center">
+                <button class="bg-grapefruit-red text-white border-none py-5 px-10 text-lg font-semibold rounded-full cursor-pointer transition-all duration-300 inline-block shadow-lg hover:bg-red-600 hover:-translate-y-1 hover:shadow-xl">
+                    Reach out for more infos!
+                </button>
             </div>
         </div>
     </section>
