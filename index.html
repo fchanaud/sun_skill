@@ -31,7 +31,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
@@ -51,26 +51,41 @@
         .step-card:hover {
             box-shadow: 0 0 0 3px rgba(255, 214, 51, 0.5), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .font-headline {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-body {
+            font-family: 'Open Sans', sans-serif;
+        }
     </style>
 </head>
-<body class="font-inter text-dark-slate scroll-smooth">
+<body class="font-body text-dark-slate scroll-smooth">
     <!-- Hero Section -->
     <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div class="hero-bg absolute inset-0 -z-10"></div>
         
         <!-- Logo in top left -->
         <div class="absolute top-8 left-8 z-20">
-            <h1 class="text-4xl font-bold text-white drop-shadow-lg">Ace Rec</h1>
+            <h1 class="font-headline text-4xl font-bold text-white drop-shadow-lg">Ace Rec</h1>
         </div>
         
-        <div class="text-center text-white z-10 relative max-w-4xl mx-auto px-6">
+        <div class="text-center text-white z-10 relative max-w-5xl mx-auto px-6">
             
             <!-- Main Content -->
             <div class="hero-text">
-                <h2 class="text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Curated Tennis</h2>
-                <h2 class="text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Camps.</h2>
-                <h2 class="text-6xl md:text-7xl font-black leading-none mb-3 text-citrus-yellow drop-shadow-lg">Premium Coaching.</h2>
-                <h2 class="text-6xl md:text-7xl font-black leading-none mb-8 drop-shadow-lg">Hassle-Free.</h2>
+                <h2 class="font-headline text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Curated Tennis</h2>
+                <h2 class="font-headline text-6xl md:text-7xl font-black leading-none mb-2 drop-shadow-lg">Camps.</h2>
+                <h2 class="font-headline text-6xl md:text-7xl font-black leading-none mb-3 text-citrus-yellow drop-shadow-lg">Premium Coaching.</h2>
+                <h2 class="font-headline text-6xl md:text-7xl font-black leading-none mb-8 drop-shadow-lg">Hassle-Free.</h2>
                 
                 <p class="text-lg md:text-xl leading-relaxed mb-10 opacity-95 drop-shadow-md max-w-2xl mx-auto">
                     Our team have curated the best camps in <strong>sunny destination</strong><br class="hidden md:block">
@@ -101,9 +116,9 @@
     <section class="py-24" id="benefits" style="background: linear-gradient(to bottom, rgba(255, 214, 51, 0.1), rgba(247, 247, 247, 1))">
         <div class="max-w-6xl mx-auto px-6">
             <!-- Section Header -->
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-dark-slate mb-6">What You'll Gain</h2>
-                <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <div class="text-center mb-20 fade-in">
+                <h2 class="font-headline text-5xl md:text-6xl font-black text-dark-slate mb-6">What You'll Gain</h2>
+                <p class="font-body text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                     Real outcomes that matter to ambitious players who value their time and want<br class="hidden md:block">
                     guaranteed results
                 </p>
@@ -112,50 +127,50 @@
             <!-- Benefits Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
                 <!-- Save Time & Avoid Risk -->
-                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl fade-in">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="#FF4C4C" stroke-width="2"/>
-                            <polyline points="12,6 12,12 16,14" stroke="#FF4C4C" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="10" stroke="#2F7D32" stroke-width="2"/>
+                            <polyline points="12,6 12,12 16,14" stroke="#2F7D32" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Save Time & Avoid Risk</h3>
-                    <p class="text-gray-600 leading-relaxed">No more hours searching—we've done the work. No risk of disappointing camps</p>
+                    <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Save Time & Avoid Risk</h3>
+                    <p class="font-body text-gray-600 leading-relaxed">No more hours searching—we've done the work. No risk of disappointing camps</p>
                 </div>
                 
                 <!-- Serious Tennis Progress -->
-                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl fade-in">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3v18h18" stroke="#FF4C4C" stroke-width="2"/>
-                            <path d="M7 12l4-4 4 4 4-4" stroke="#FF4C4C" stroke-width="2"/>
+                            <path d="M3 3v18h18" stroke="#2F7D32" stroke-width="2"/>
+                            <path d="M7 12l4-4 4 4 4-4" stroke="#2F7D32" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Serious Tennis Progress</h3>
-                    <p class="text-gray-600 leading-relaxed">Learn, improve, and take real skills back home in just a few days</p>
+                    <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Serious Tennis Progress</h3>
+                    <p class="font-body text-gray-600 leading-relaxed">Learn, improve, and take real skills back home in just a few days</p>
                 </div>
                 
                 <!-- Curated Experience -->
-                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl fade-in">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="#FF4C4C" stroke-width="2"/>
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="#2F7D32" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Curated Experience</h3>
-                    <p class="text-gray-600 leading-relaxed">Train hard in premium settings with sun, great locations, and thoughtful extras</p>
+                    <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Curated Experience</h3>
+                    <p class="font-body text-gray-600 leading-relaxed">Train hard in premium settings with sun, great locations, and thoughtful extras</p>
                 </div>
                 
                 <!-- Complete Confidence -->
-                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6">
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all duration-300 border border-gray-100 hover:-translate-y-2 hover:shadow-xl fade-in">
+                    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF4C4C" stroke-width="2"/>
-                            <path d="M9 12l2 2 4-4" stroke="#FF4C4C" stroke-width="2"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#2F7D32" stroke-width="2"/>
+                            <path d="M9 12l2 2 4-4" stroke="#2F7D32" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Complete Confidence</h3>
-                    <p class="text-gray-600 leading-relaxed">Book knowing a tennis passionate expert has tested and approved every detail</p>
+                    <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Complete Confidence</h3>
+                    <p class="font-body text-gray-600 leading-relaxed">Book knowing a tennis passionate expert has tested and approved every detail</p>
                 </div>
             </div>
         </div>
@@ -165,8 +180,8 @@
     <section class="bg-white py-24" id="how-it-works">
         <div class="max-w-6xl mx-auto px-6">
             <!-- Section Header -->
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black text-dark-slate mb-6">How It Works</h2>
+            <div class="text-center mb-20 fade-in">
+                <h2 class="font-headline text-5xl md:text-6xl font-black text-dark-slate mb-6">How It Works</h2>
             </div>
             
             <!-- Steps Container -->
@@ -175,11 +190,11 @@
                 <div class="flex-1 max-w-sm">
                     <div class="step-card bg-white border-l-4 border-lime-green p-8 rounded-lg shadow-lg transition-all duration-300 h-full flex flex-col" style="transition: box-shadow 0.3s ease; position: relative;">
                         <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">01</div>
+                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4" style="background-color: #FFD633;">01</div>
                         </div>
                         <div class="text-center flex-1">
-                            <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Share Your Tennis Goals</h3>
-                            <p class="text-gray-600 leading-relaxed">Tell me your current level, what you want to improve, and your training preferences</p>
+                            <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Share Your Tennis Goals</h3>
+                            <p class="font-body text-gray-600 leading-relaxed">Tell me your current level, what you want to improve, and your training preferences</p>
                         </div>
                     </div>
                 </div>
@@ -195,11 +210,11 @@
                 <div class="flex-1 max-w-sm">
                     <div class="step-card bg-white border-l-4 border-lime-green p-8 rounded-lg shadow-lg transition-all duration-300 h-full flex flex-col" style="transition: box-shadow 0.3s ease; position: relative;">
                         <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">02</div>
+                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4" style="background-color: #FFD633;">02</div>
                         </div>
                         <div class="text-center flex-1">
-                            <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Get Handpicked Options</h3>
-                            <p class="text-gray-600 leading-relaxed">Receive 2-3 team-tested camps that perfectly match your profile</p>
+                            <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Get Handpicked Options</h3>
+                            <p class="font-body text-gray-600 leading-relaxed">Receive 2-3 team-tested camps that perfectly match your profile</p>
                         </div>
                     </div>
                 </div>
@@ -215,11 +230,35 @@
                 <div class="flex-1 max-w-sm">
                     <div class="step-card bg-white border-l-4 border-lime-green p-8 rounded-lg shadow-lg transition-all duration-300 h-full flex flex-col" style="transition: box-shadow 0.3s ease; position: relative;">
                         <div class="text-center mb-6">
-                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">03</div>
+                            <div class="w-20 h-20 bg-citrus-yellow text-dark-slate rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4" style="background-color: #FFD633;">03</div>
                         </div>
                         <div class="text-center flex-1">
-                            <h3 class="text-2xl font-bold text-dark-slate mb-4 leading-tight">Pack & Go</h3>
-                            <p class="text-gray-600 leading-relaxed">We arrange everything—you just show up, train hard, and return with measurable progress</p>
+                            <h3 class="font-headline text-2xl font-bold text-dark-slate mb-4 leading-tight">Pack & Go</h3>
+                            <p class="font-body text-gray-600 leading-relaxed">We arrange everything—you just show up, train hard, and return with measurable progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial Section -->
+            <div class="text-center mb-16 fade-in">
+                <div class="bg-gradient-to-r from-citrus-yellow/10 to-orange/10 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <blockquote class="font-body text-xl text-gray-700 italic mb-4">
+                        "Within 3 days, my serve improved by 15mph and my backhand became my strongest shot. The camp selection was perfect for my skill level."
+                    </blockquote>
+                    <div class="font-headline font-semibold text-dark-slate">— Sarah M., Tennis Enthusiast</div>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="font-headline text-3xl font-black text-citrus-yellow" style="color: #FFD633;">500+</div>
+                            <div class="font-body text-sm text-gray-600">Players Trained</div>
+                        </div>
+                        <div>
+                            <div class="font-headline text-3xl font-black text-citrus-yellow" style="color: #FFD633;">98%</div>
+                            <div class="font-body text-sm text-gray-600">Satisfaction Rate</div>
+                        </div>
+                        <div>
+                            <div class="font-headline text-3xl font-black text-citrus-yellow" style="color: #FFD633;">15+</div>
+                            <div class="font-body text-sm text-gray-600">Premium Destinations</div>
                         </div>
                     </div>
                 </div>
@@ -227,7 +266,7 @@
             
             <!-- CTA Section -->
             <div class="text-center">
-                <button class="bg-grapefruit-red text-white border-none py-5 px-10 text-lg font-semibold rounded-xl cursor-pointer transition-all duration-300 inline-block shadow-lg hover:bg-red-600 hover:-translate-y-1 hover:shadow-xl">
+                <button class="bg-grapefruit-red text-white border-none py-5 px-10 text-lg font-semibold rounded-xl cursor-pointer transition-all duration-300 inline-block shadow-lg hover:bg-red-600 hover:-translate-y-1 hover:shadow-xl" style="background-color: #FF4C4C;">
                     Reach out for more infos!
                 </button>
             </div>
