@@ -1,0 +1,29 @@
+{
+  "name": "ace-rec-landing",
+  "version": "1.0.0",
+  "description": "Curated Tennis Camps Landing Page - Premium coaching in sunny destinations",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site ready for deployment'",
+    "preview": "python -m http.server 8000"
+  },
+  "keywords": [
+    "tennis",
+    "camps",
+    "coaching",
+    "sports",
+    "travel",
+    "landing-page"
+  ],
+  "author": "Ace Rec",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/sun_skill.git"
+  },
+  "homepage": "https://your-domain.vercel.app"
+}
